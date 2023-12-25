@@ -121,3 +121,19 @@ body {
   top: 115;
   left: 185;
  }
+
+ span {
+  color: red
+ }
+
+ .clear-entire {
+  position: relative;
+  border: none;
+  color: white;
+  background-color: #95a5a6;
+  border-radius: 5px;
+  width: 65;
+  height: 30;
+  top: 70;
+  left: 185;
+ }
