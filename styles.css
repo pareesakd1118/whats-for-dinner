@@ -95,3 +95,29 @@ body {
  span {
   display: inline;
  }
+
+ .dish {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .dish-name {
+  font-size: 38px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+ .clear {
+  position: relative;
+  border: none;
+  color: white;
+  background-color: #95a5a6;
+  border-radius: 5px;
+  width: 65;
+  height: 30;
+  top: 115;
+  left: 185;
+ }
