@@ -130,3 +130,15 @@ body {
  span {
   color: red;
  }
+
+ .form {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+ }
+
+ .hidden {
+  display: none;
+ }
