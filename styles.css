@@ -80,6 +80,11 @@ body {
     font-size: small;
   }
 
+  .blue-button:hover {
+    border: 1.5px solid  blue;
+    cursor:pointer;
+  }
+
   .superscript {
     vertical-align: super;
   }
@@ -111,29 +116,17 @@ body {
  }
 
  .clear {
-  position: relative;
+  position: absolute;
   border: none;
   color: white;
   background-color: #95a5a6;
   border-radius: 5px;
   width: 65;
   height: 30;
-  top: 115;
-  left: 185;
+  top: 320;
+  left: 390;
  }
 
  span {
-  color: red
- }
-
- .clear-entire {
-  position: relative;
-  border: none;
-  color: white;
-  background-color: #95a5a6;
-  border-radius: 5px;
-  width: 65;
-  height: 30;
-  top: 70;
-  left: 185;
+  color: red;
  }
