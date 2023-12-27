@@ -142,3 +142,15 @@ body {
  .hidden {
   display: none;
  }
+
+ .favorite {
+  position: absolute;
+  border: none;
+  color: white;
+  background-color: #95a5a6;
+  border-radius: 5px;
+  width: 80;
+  height: 30;
+  top: 320;
+  right: 375;
+ }

@@ -5,7 +5,7 @@ var desserts = ['Chocolate Cake', 'Brownies', 'Apple Pie', 'Ice-cream', 'Key Lim
 
 var mains = ['Steak', 'Chicken', 'Pork Roast', 'Salmon', 'Spaghetti', 'Kabob', 'Tilapia', 'Veggie Stirfry', 'Scallops']
 
-var allTypes = [sides, desserts, mains]
+var favoriteFoods = []
 
 //HTML ELEMENTS:
 var box2 = document.querySelector('.box2')
@@ -23,8 +23,8 @@ var submitButton = document.querySelector('#submit')
 
 //EVENT LISTENERS:
 blueButton.addEventListener('click', chooseFood)
-recipeButton.addEventListener('click', showForm)
-submitButton.addEventListener('click', addToArray)
+recipeButton.addEventListener('click', function() {switchView(recipeForm, imageContainer)})
+submitButton.addEventListener('click', addRecipe)
 
 //FUNCTIONS: 
 
@@ -40,13 +40,15 @@ function chooseFood() {
                         <i>You should make:</i> 
                         <p class="dish-name">${mains[getRandomInt(mains)]} with a side of ${sides[getRandomInt(sides)]} and ${desserts[getRandomInt(desserts)]} for dessert!</p>
                         <button class="clear">CLEAR</button>
+                        <button class="favorite">FAVORITE</button>  
                     </div>`
       }
   else if (main.checked) {
     box2.innerHTML = `<div class="dish"> 
                         <i>You should make:</i> 
                         <p class="dish-name">${mains[getRandomInt(mains)]}!</p>  
-                        <button class="clear">CLEAR</button>                     
+                        <button class="clear">CLEAR</button>
+                        <button class="favorite">FAVORITE</button>                     
                      </div>`
   }
   else if (side.checked) {
@@ -54,6 +56,7 @@ function chooseFood() {
                         <i>You should make:</i> 
                         <p class="dish-name">${sides[getRandomInt(sides)]}!</p>
                         <button class="clear">CLEAR</button>
+                        <button class="favorite">FAVORITE</button> 
                      </div>`
   }
   else if (dessert.checked) {
@@ -61,6 +64,7 @@ function chooseFood() {
                         <i>You should make:</i> 
                         <p class="dish-name">${desserts[getRandomInt(desserts)]}!</p>
                         <button class="clear">CLEAR</button>
+                        <button class="favorite">FAVORITE</button> 
                      </div>`
   } else {
     box2.innerHTML = `<div class="dish"> 
@@ -71,7 +75,8 @@ function chooseFood() {
 
   var clearButton = document.querySelector('.clear')
   clearButton.addEventListener('click', returnPotImage)
-
+  var favoriteButton = document.querySelector('.favorite')
+  favoriteButton.addEventListener('click', addToFavorites)
 }
 
 //this function brings back pot image to box 2
@@ -81,14 +86,14 @@ function returnPotImage() {
                     </svg>`                   
 }
 
-//this function shows the form page and hides the main page 
-function showForm() {
-  recipeForm.classList.remove('hidden')
-  imageContainer.classList.add('hidden')
+//this function hides one page and shows another
+function switchView(show, hide) {
+  show.classList.remove('hidden')
+  hide.classList.add('hidden')
 }
 
-//adds new food to array 
-function addToArray(event) {
+//adds new food to array and puts it on the front page
+function addRecipe(event) {
     event.preventDefault();
   if (recipeType.value == 'sides') {
         sides.push(recipeName.value)
@@ -104,13 +109,22 @@ function addToArray(event) {
                         <i>You should make:</i> 
                         <p class="dish-name">${recipeName.value}!</p>
                         <button class="clear">CLEAR</button>
+                        <button class="favorite">FAVORITE</button> 
                      </div>`
 
-  recipeForm.classList.add('hidden')
-  imageContainer.classList.remove('hidden')
+  switchView(imageContainer, recipeForm)
 
   var clearButton = document.querySelector('.clear')
   clearButton.addEventListener('click', returnPotImage)
+  var favoriteButton = document.querySelector('.favorite')
+  favoriteButton.addEventListener('click', addToFavorites)
 }
 
+//adds recipe to favorites 
+function addToFavorites() {
+  var dishName = document.querySelector('.dish-name')
+  if (!favoriteFoods.includes(dishName.innerText)){
+  favoriteFoods.push(dishName.innerText)
+  }
+}
 
