@@ -5,6 +5,8 @@ var desserts = ['Chocolate Cake', 'Brownies', 'Apple Pie', 'Ice-cream', 'Key Lim
 
 var mains = ['Steak', 'Chicken', 'Pork Roast', 'Salmon', 'Spaghetti', 'Kabob', 'Tilapia', 'Veggie Stirfry', 'Scallops']
 
+var allTypes = [sides, desserts, mains]
+
 //HTML ELEMENTS:
 var box2 = document.querySelector('.box2')
 var side = document.querySelector('#side')
@@ -15,11 +17,14 @@ var blueButton = document.querySelector('.blue-button')
 var recipeButton = document.querySelector('#recipe')
 var imageContainer = document.querySelector('.image-container')
 var recipeForm = document.querySelector('.form')
+var recipeType = document.querySelector('#rType')
+var recipeName = document.querySelector('#rName')
+var submitButton = document.querySelector('#submit')
 
 //EVENT LISTENERS:
 blueButton.addEventListener('click', chooseFood)
 recipeButton.addEventListener('click', showForm)
-
+submitButton.addEventListener('click', addToArray)
 
 //FUNCTIONS: 
 
@@ -81,3 +86,31 @@ function showForm() {
   recipeForm.classList.remove('hidden')
   imageContainer.classList.add('hidden')
 }
+
+//adds new food to array 
+function addToArray(event) {
+    event.preventDefault();
+  if (recipeType.value == 'sides') {
+        sides.push(recipeName.value)
+    }
+  if (recipeType.value == 'mains') {
+        mains.push(recipeName.value)
+    }
+  if (recipeType.value == 'desserts') {
+        desserts.push(recipeName.value)
+    } 
+  
+  box2.innerHTML = `<div class="dish"> 
+                        <i>You should make:</i> 
+                        <p class="dish-name">${recipeName.value}!</p>
+                        <button class="clear">CLEAR</button>
+                     </div>`
+
+  recipeForm.classList.add('hidden')
+  imageContainer.classList.remove('hidden')
+
+  var clearButton = document.querySelector('.clear')
+  clearButton.addEventListener('click', returnPotImage)
+}
+
+
