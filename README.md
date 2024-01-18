@@ -13,16 +13,13 @@ I built a web application which helps the user brainstorm what meal to eat. The 
 ![screen shot of create poster page](./Screenshot-WFD.png)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+I have been learning javascript for about 3 weeks, and HTML/CSS for about two weeks. I spent a total of about 10 hours on this project. 
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+[Pareesa Kamgar-Dayhoff's GitHub](https://github.com/pareesakd1118)
 
 ### Learning Goals:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
 - Individualize your programming skill set
-
-### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
