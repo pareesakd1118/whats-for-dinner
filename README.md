@@ -10,7 +10,7 @@ I built a web application which helps the user brainstorm what meal to eat. The 
 4. Type `code .` to open the directory in text editor, or simply type `open index.html` to open the web application
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![screen shot of create poster page](./Screenshot-WFD)
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
