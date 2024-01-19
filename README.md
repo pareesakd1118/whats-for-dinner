@@ -1,7 +1,7 @@
 # What's for Dinner? 
 
 ### Abstract:
-I built a web application which helps the user brainstorm what meal to eat. The user can pick from 3 categories: side, main, and dessert and the application will randomly name a meal for them. The user can also select "entire meal," in which case the application generates a random combination of side, main and dessert dishes the user can/should make. The web application comes preset with a number of food items for the designated categories, but the user can also enter in meals of their choosing for one of the designated meal categories, and that new addition will now be added to the number of random dishes the web application suggests. 
+I built a web application (deployed website linked [here](https://pareesakd1118.github.io/whats-for-dinner/)) which helps the user brainstorm what meal to eat. The user can pick from 3 categories: side, main, and dessert and the application will randomly name a meal for them. The user can also select "entire meal," in which case the application generates a random combination of side, main and dessert dishes the user can/should make. The web application comes preset with a number of food items for the designated categories, but the user can also enter in meals of their choosing for one of the designated meal categories, and that new addition will now be added to the number of random dishes the web application suggests. 
 
 ### Installation Instructions:
 1. Fork this repo and copy the SSH Key
